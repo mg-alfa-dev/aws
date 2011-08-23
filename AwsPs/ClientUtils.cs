@@ -6,22 +6,22 @@ using Amazon.EC2.Model;
 
 namespace AwsPs
 {
-    public static class ClientUtilsProvider
+    public static class ClientProvider
     {
-        public static IClientUtils GetClient()
+        public static IClient GetClient()
         {
-            return new FakeClientUtils();
+            return new Client();
         }
     }
 
-    public interface IClientUtils
+    public interface IClient
     {
         IEnumerable<Instance> GetInstances();
         void StartInstance(string instanceId);
         void StopInstance(string instanceId);
     }
 
-    public class FakeClientUtils : IClientUtils
+    public class FakeClient : IClient
     {
         public IEnumerable<Instance> GetInstances()
         {
@@ -44,7 +44,7 @@ namespace AwsPs
         }
     }
 
-    public class ClientUtilsImpl : IClientUtils
+    public class Client : IClient
     {
         public IEnumerable<Instance> GetInstances()
         {

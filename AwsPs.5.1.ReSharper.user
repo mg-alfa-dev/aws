@@ -7,8 +7,15 @@
     </boolean>
   </SettingsComponent>
   <RecentFiles>
-    <RecentFiles />
-    <RecentEdits />
+    <RecentFiles>
+      <File id="307BB585-6D3E-4AEB-B5F9-6F94D089FB22/f:ClientUtils.cs" caret="518" fromTop="23" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="307BB585-6D3E-4AEB-B5F9-6F94D089FB22/f:ClientUtils.cs" caret="514" fromTop="23" />
+      <File id="307BB585-6D3E-4AEB-B5F9-6F94D089FB22/f:ClientUtils.cs" caret="328" fromTop="16" />
+      <File id="307BB585-6D3E-4AEB-B5F9-6F94D089FB22/f:ClientUtils.cs" caret="175" fromTop="8" />
+      <File id="307BB585-6D3E-4AEB-B5F9-6F94D089FB22/f:ClientUtils.cs" caret="275" fromTop="12" />
+    </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />

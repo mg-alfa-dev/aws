@@ -10,7 +10,7 @@ namespace AwsPs
         protected override void ProcessRecord()
         {
             WriteObject("Sending AWS request...");
-            var client = ClientUtilsProvider.GetClient();
+            var client = ClientProvider.GetClient();
             WriteObject(client.GetInstances());
         }
     }
@@ -24,7 +24,7 @@ namespace AwsPs
         protected override void ProcessRecord()
         {
             WriteObject("Sending AWS request...");
-            var client = ClientUtilsProvider.GetClient();
+            var client = ClientProvider.GetClient();
             client.StartInstance(InstanceId);
             WriteObject("Started successfully");
         }
@@ -39,7 +39,7 @@ namespace AwsPs
         protected override void ProcessRecord()
         {
             WriteObject("Sending AWS request...");
-            var client = ClientUtilsProvider.GetClient();
+            var client = ClientProvider.GetClient();
             client.StopInstance(InstanceId);
             WriteObject("Stopped successfully");
         }
