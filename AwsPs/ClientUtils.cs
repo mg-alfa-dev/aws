@@ -48,21 +48,20 @@ namespace AwsPs
     {
         public IEnumerable<Instance> GetInstances()
         {
-            AmazonEC2Client client = _GetClient();
+            var client = _GetClient();
             var describeInstancesRequest = new DescribeInstancesRequest();
             var response = client.DescribeInstances(describeInstancesRequest);
-            var instances = response.DescribeInstancesResult.Reservation
+            return response.DescribeInstancesResult.Reservation
                 .SelectMany(x => x.RunningInstance)
                 .Select(x =>
                         new Instance
                         {
-                            Name = x.Tag.Where(y => y.Key == "Name").Select(z => z.Value).First(),
                             Id = x.InstanceId,
+                            Name = x.Tag.Where(y => y.Key == "Name").Select(y => y.Value).First(),
                             State = x.InstanceState.Name,
-                            Ip = x.IpAddress,
                             Dns = x.PublicDnsName,
+                            Ip = x.IpAddress,
                         });
-            return instances;
         }
 
         public void StartInstance(string instanceId)
