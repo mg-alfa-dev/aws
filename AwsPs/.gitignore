@@ -1,0 +1,17 @@
+_ReSharper*
+*.resharper*
+obj
+bin
+Bin
+*.suo
+*.ncb
+binaries
+CLI Debug
+*.user
+.svn
+*.sln.cache
+Releases
+build
+TestResult.xml
+*.svclog
+publish
