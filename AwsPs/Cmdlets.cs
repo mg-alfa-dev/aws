@@ -4,7 +4,7 @@
 
 namespace AwsPs
 {
-    [Cmdlet(VerbsCommon.Get, "Instance")]
+    [Cmdlet(VerbsCommon.Get, "AwsInstance")]
     public class Get_Instance : PSCmdlet
     {
         protected override void ProcessRecord()
@@ -15,7 +15,7 @@ namespace AwsPs
         }
     }
 
-    [Cmdlet("Start", "Instance")]
+    [Cmdlet("Start", "AwsInstance")]
     public class Start_Instance : PSCmdlet
     {
         [Parameter(Position = 0, Mandatory = true)] 
@@ -30,7 +30,7 @@ namespace AwsPs
         }
     }
 
-    [Cmdlet("Stop", "Instance")]
+    [Cmdlet("Stop", "AwsInstance")]
     public class Stop_Instance : PSCmdlet
     {
         [Parameter(Position = 0, Mandatory = true)] 
