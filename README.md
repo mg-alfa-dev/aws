@@ -7,5 +7,7 @@ Usage
 -----
 
   > start-awsinstance ip-012345
+  
   > get-awsinstance
+  
   > stop-awsinstance ip-012345
