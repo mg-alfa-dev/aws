@@ -76,8 +76,8 @@ namespace AwsPs
 
         private static AmazonEC2Client _GetClient()
         {
-            var awsAccessKeyId = "AKIAJIFMXVM6GQ3J76DQ";
-            var secretAccessKey = "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".ToCharArray();
+            var awsAccessKeyId = "ACCESS_KEY";
+            var secretAccessKey = "SECRET_ACCESS_KEY".ToCharArray();
             var awsSecretAccessKey = new SecureString();
             foreach (var secretAccessKeyChar in secretAccessKey)
                 awsSecretAccessKey.AppendChar(secretAccessKeyChar);
